@@ -128,7 +128,7 @@ def get_1000_data():
             if count >= 1:
                 record = {"SUPPLIER_ID": 1111111,
                           "SUPPLIER_NAME": row['OrganizationName'] if row['OrganizationName'] else row['RegisteredBusinessName'],
-                          "SUPPLIER_STREET_ADDRESS_1": row['Address1'],
+                          "SUPPLIER_STREET_ADDRESS_1": row['Address1'] if row['Address1'] else row['StreetAddress'],
                           "SUPPLIER_CITY": row['City'],
                           "SUPPLIER_ZIP": row['Zip'],
                           "COUNTRY": row['Country'],
